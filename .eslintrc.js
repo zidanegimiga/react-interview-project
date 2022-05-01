@@ -25,6 +25,14 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
-      "@typescript-eslint/explicit-module-binary-types":"off"
+    "@typescript-eslint/explicit-module-binary-types":"off",
   },
+  "overrides": [
+    {
+      "files": ["*-test.js","*.spec.js"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
 };
