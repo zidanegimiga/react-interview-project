@@ -1,23 +1,23 @@
 /* eslint-disable no-undef */
 import React, { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
-import styles from "../../styles/Buttons.module.scss";
+import styles from "../../../styles/Buttons.module.scss";
 
 type BtnProps<T extends ElementType> = {
   renderAs?: T;
-  isLoading?: boolean;
+  isloading?: boolean;
   children: ReactNode;
 } & ComponentPropsWithoutRef<T>;
 
 const Button = <T extends ElementType = "button">({
   renderAs,
-  isLoading,
+  isloading,
   children,
   ...rest
 }: BtnProps<T>): JSX.Element => {
   return (
     <button
       as={renderAs}
-      isLoading={isLoading}
+      isloading={isloading}
       {...rest}
       className={styles.button}
     >
