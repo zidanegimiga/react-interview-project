@@ -2,12 +2,12 @@ import type { NextPage } from 'next';
 import TitleBar from '../components/commons/TitleBar';
 import HomePageCards from '../components/HomePageCard';
 
-const Home: NextPage = (props) => {
+const Home: NextPage = () => {
 
   return (
     <div>
       <TitleBar />
-      <HomePageCards />
+      <HomePageCards /> 
     </div>
   )
 }
