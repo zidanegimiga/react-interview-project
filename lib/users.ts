@@ -1,6 +1,5 @@
 /*eslint-disable */
 import axios from 'axios';
-import http from "http"
 
 export const baseUrl = process.env.BASE_URL
 
