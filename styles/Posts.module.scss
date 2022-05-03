@@ -1,0 +1,17 @@
+.mainCointainer {
+    margin-right: 132px;
+    margin-left: 132px;
+}
+
+.PostCard {
+    width: 80%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    height: auto;
+    margin: 32px;
+    padding: 16px;
+    @media (max-width: 600px) {
+        margin-right: 32px       
+    }
+}
