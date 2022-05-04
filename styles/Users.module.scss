@@ -1,0 +1,63 @@
+.wrapper {
+  margin-left: 132px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {  
+  display: flex;
+  width: 100%;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 132px;
+  align-items: center;
+}
+
+.userCardsContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  width: 60%;
+}
+
+.userCard {
+  border: #707070 solid;
+  border-width: 1px;
+  border-radius: 8px;
+  padding: 8px;
+  &:hover{
+    border: #7249C3 solid;
+    border-width: 2px;
+  }
+}
+
+.userCardsContentName {
+  font-weight: 600;
+  color:#707070;
+}
+
+.searchBox {
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 2px;
+  &:active {
+    border: #7249C3 solid;
+  }
+  color: #707070;
+}
+
+.statsCard {
+  border: #707070 solid;
+  border-width: 1px;
+  border-radius: 8px;
+  padding: 32px;
+  height: 200px;
+  width: 250px;
+  margin-top: 32px; 
+}

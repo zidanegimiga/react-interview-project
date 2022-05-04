@@ -1,13 +1,15 @@
-import type { NextPage } from 'next'
-
-import UsersTable from '../components/UserTable'
+import type { NextPage } from 'next';
+import TitleBar from '../components/commons/TitleBar';
+import HomePageCards from '../components/HomePageCard';
 
 const Home: NextPage = () => {
+
   return (
-    <>
-      <UsersTable />
-    </>
+    <div>
+      <TitleBar />
+      <HomePageCards /> 
+    </div>
   )
 }
 
-export default Home
+export default Home;

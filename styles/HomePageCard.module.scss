@@ -1,0 +1,20 @@
+/*colors*/
+$primary: #707070;
+$accent: #7249c3;
+$secondary: #d8d4d4;
+
+.mainContainer {
+  border-color: $secondary;
+  border-style: solid;
+  border-radius: 16px;
+  margin-left: 132px;
+  margin-right: 132px;
+  margin-top: 72px;
+}
+
+.innerContainer {
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

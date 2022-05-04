@@ -1,5 +1,6 @@
-import '../../styles/globals.css'
-import type { AppProps } from 'next/app'
+/* eslint-disable */
+import type { AppProps } from 'next/app';
+import '../../styles/globals.scss';
 
 import reportWebVitals from '../reportWebVitals';
 
@@ -8,4 +9,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
-reportWebVitals();
+void reportWebVitals();
