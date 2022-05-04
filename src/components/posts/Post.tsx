@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import styles from "../../styles/Posts.module.scss";
+import styles from "../../../styles/Posts.module.scss";
 
 const Post = (props) => {
   const post = props.post;
