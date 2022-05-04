@@ -1,9 +1,9 @@
-import styles from "../../styles/Users.module.scss";
 import {
   nameStyle,
   userNameStyle,
   cityStyle,
 } from "../constants/inlineStyle";
+import styles from "../../../styles/Users.module.scss";
 
 type User = {
   name: string;
