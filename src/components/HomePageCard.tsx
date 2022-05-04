@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import styles from "../../styles/HomepageCard.module.scss";
+import styles from "../../styles/HomePageCard.module.scss";
 import { titleStyle } from './constants/inlineStyle';
 
 import Button from './commons/Button';
