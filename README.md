@@ -30,6 +30,23 @@
   - The name of each user should be editable, and should send the update to the server (note that the update is faked on jsonplaceholder).
   - Display the number of users living in an Appt, and in a Suite (field address.suite).
 
+  ### Design
+  Figma Link: https://www.figma.com/file/lh04De0iBAplQCcl9eUP1M/React-Project-Interview?node-id=0%3A1
+  
+  ![image](https://user-images.githubusercontent.com/33351058/166953718-0e97bf55-4d93-4312-adeb-1b6838a5879d.png)
+  
+  ![image](https://user-images.githubusercontent.com/33351058/166953815-c195c4a0-2c37-48a7-b81e-13ba0c73ff1a.png)
+  
+  ![image](https://user-images.githubusercontent.com/33351058/166953901-dbad9b9b-ae19-400d-97fe-05234a753929.png)
+  
+  ![image](https://user-images.githubusercontent.com/33351058/166960854-2c7e4963-8c8d-46e2-8c61-a8177ab0f1d4.png)
+  
+  ![image](https://user-images.githubusercontent.com/33351058/166960929-4e5f0e8d-8561-4843-a11c-d4d078f00b22.png)
+  
+  ![image](https://user-images.githubusercontent.com/33351058/166961009-1ec36a9f-92f0-4164-a10d-6751500b7d97.png)
+
+
+
   ### Rules
   - Add spinners while information is loading
   - Use open-sourced tools
