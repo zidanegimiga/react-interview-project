@@ -1,13 +1,19 @@
 .nav {
   margin-top: 16px;  
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
+  @media (max-width: 900px){
+    margin-bottom: 8px;
+    margin-top: 8px;   
+  }    
 }
 
 .mainWrapper {
   display: flex;
   width: 100%;
-  margin-right: 132px;
   justify-content: space-between;
+  @media (max-width: 435px){
+    display: none;
+  }
 }
 
 .headerLogo{
@@ -15,10 +21,11 @@
 }
 
 .homeLink {
+  display: flex;
+  padding: 4px;
   text-decoration: none;
   font-weight: 600;
   color: #707070;
-  margin-left: 132px;
   &:hover {
     color: #7249C3;
   }
@@ -34,9 +41,11 @@
   align-items: center;
   justify-content: center;
   padding: 0px;
-  &:hover {
-    color: #7249C3;
-  }
+}
+
+.linksRightContainer a:hover{
+  border-bottom: 2px solid #7249C3;
+  color: #7249C3;  
 }
 
 .rightSideLink{
@@ -45,6 +54,32 @@
   text-decoration: none;
   color: #707070;
   &:hover {
-    color: #7249C3;
+    color: #060507;
   }
+  @media (max-width: 700px){
+    margin-right: 16px;   
+  }
+}
+
+.mobileNavContainer {
+  display: none;
+  @media (max-width: 435px) {
+    width: 100%;
+    border-bottom: #707070 solid 1px;;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.mobileNavLinksContainer {
+  @media (max-width: 435px) {
+    display:flex;
+    flex-direction: column;    
+  }
+}
+
+.mobileNavContainer span {
+  font-size: 12px;
+  margin-bottom: 8px;
 }
