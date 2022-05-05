@@ -3,7 +3,7 @@ import useSwr from "swr";
 import { getPosts, baseUrl } from "../../lib/posts";
 import { getUsers } from "../../lib/users";
 import {getPostsByUsers} from "../components/utils/utils";
-import Navbar from "../components/commons/Navbar";
+import Navbar from "../components/global/Navbar";
 import Post from "../components/posts/Post";
 import styles from "../../styles/Posts.module.scss"
 

@@ -4,12 +4,15 @@ $accent: #7249c3;
 $secondary: #d8d4d4;
 
 .mainContainer {
+  margin-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-color: $secondary;
   border-style: solid;
+  border-width: 1px;
   border-radius: 16px;
-  margin-left: 132px;
-  margin-right: 132px;
-  margin-top: 72px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
 .innerContainer {

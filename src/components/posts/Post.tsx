@@ -7,9 +7,9 @@ const Post = (props) => {
   return (
     post?.map((post) =>(
         <div className={styles.PostCard} key={post.id}>
-            <p>{post.name}</p>
-            <p>{post.title}</p>
-            <p>{post.body}</p>
+            <span className={styles.postName}>{post.name}</span>
+            <span className={styles.postTitle}>{post.title}</span>
+            <span className={styles.postBody}>{post.body}</span>
         </div>
     ))
   )
