@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import TitleBar from '../components/commons/TitleBar';
-import HomePageCards from '../components/HomePageCard';
+import TitleBar from '../components/global/TitleBar';
+import HomePageCards from '../components/home/HomePageCard';
 
 const Home: NextPage = () => {
 
