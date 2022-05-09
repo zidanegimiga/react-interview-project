@@ -8,20 +8,31 @@
 }
 
 .mainWrapper {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
+  border-bottom: #707070 solid;
   @media (max-width: 435px){
     display: none;
   }
 }
 
-.homeLink {
+.innerContainer {
   display: flex;
-  padding: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #707070;
+  justify-content: space-between;
+  margin-left: 72px;
+  margin-right: 72px;
+}
+
+.homeLink {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FCFCFC;
   &:hover {
     color: #7249C3;
   }
@@ -42,10 +53,18 @@
 }
 
 .rightSideLink{
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FCFCFC;
   padding: 4px;
   margin-right: 64px;
   text-decoration: none;
-  color: #707070;
   &:hover {
     color: #060507;
   }
