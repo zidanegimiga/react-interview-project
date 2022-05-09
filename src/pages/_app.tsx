@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return( 
     <>
       <NextNProgress 
-        color="purple"        
+        color="#7249c3"        
       />
       <Component {...pageProps} />;
     </>
