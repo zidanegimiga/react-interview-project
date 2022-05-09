@@ -3,6 +3,7 @@ import { useState } from "react";
 import { navBar } from '../constants/web_strings';
 import {CgMenuRight, CgClose} from "react-icons/cg"
 import styles from "../../../styles/Navbar.module.scss"
+import Image from 'next/image';
 
 const MobileNavbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -28,16 +29,16 @@ const MobileNavbar = () => {
     {mobileNav && 
       <div className={styles.mobileNavLinksContainer}>
         <Link href={navBar.home[1]} passHref>
-          <span>{navBar.home[0]}</span>
+          <Image src="/logo.png" alt='logo'/>
         </Link>
         <Link href={navBar.users[1]} passHref>
-          <span>{navBar.users[0]}</span>
+          <a>{navBar.users[0]}</a>
         </Link>
         <Link href={navBar.posts[1]} passHref>
-          <span>{navBar.posts[0]}</span>
+          <a>{navBar.posts[0]}</a>
         </Link>      
         <Link href={navBar.about[1]} passHref>
-          <span>{navBar.about[0]}</span>
+          <a>{navBar.about[0]}</a>
         </Link>
       </div>
     }
