@@ -43,18 +43,23 @@ export function getSuiteCount(data: Users) {
 /**
  * @param {Users[]} users
  * @param {Posts[]} posts
- * @return {UserPosts[]} usersPosts
+ * @return {UsersPosts[]} usersPosts
  */
-export function getPostsByUsers (users: Users, posts: Posts) {
-  const usersPosts = users?.reduce((acc, curr) => {
-    const index = posts?.findIndex(item => item.userId === curr.id);
-    if(index > -1) {
-      curr.title = posts[index].title;
-      curr.body = posts[index].body;    
+export function getPostsByUsers(users: Users, posts: Posts) {
+  const usersPosts = [];
+  for (const user of users){
+    for (let index = 0; index < posts.length; index++){
+      if (posts[index].userId === user.id){
+        usersPosts.push({
+          postId: posts[index].id,
+          userId: user.id,
+          userName: user.name,
+          title: posts[index].title
+        });
+        posts.splice(index, 1);
+        index--;
+      }
     }
-    
-    acc.push(curr);
-    return acc;
-  }, []);
+  }
   return usersPosts;
 }
