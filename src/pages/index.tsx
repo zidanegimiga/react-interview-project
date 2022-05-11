@@ -3,11 +3,12 @@ import type { NextPage } from 'next';
 import TitleBar from '../components/global/TitleBar';
 import HomePageCards from '../components/home/HomePageCard';
 import Navbar from '../components/global/Navbar';
+import styles from '../../styles/index.module.scss';
 
 const Home: NextPage = () => {
 
   return (
-    <div>
+    <div className={styles.homeBody}>
       <TitleBar />
         <Navbar />
         <HomePageCards />
