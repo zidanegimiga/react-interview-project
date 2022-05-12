@@ -10,6 +10,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.homeBody}>
       <TitleBar title="Home"/>
+      <Navbar />
       <HomePageCards /> 
     </div>
   )

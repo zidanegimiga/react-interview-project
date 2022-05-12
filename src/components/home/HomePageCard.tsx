@@ -1,29 +1,24 @@
-//import Link from 'next/link';
-//import Button from '../global/Button';
+import Link from 'next/link';
+import Button from '../global/Button';
 import styles from "../../../styles/HomePageCard.module.scss";
-import Navbar from "../global/Navbar";
 
 const HomePageCards = () => {
   return (
-    // <div className={styles.mainContainer}>
-    //   <div className={styles.innerContainer}>
-    //     <div className={styles.header}>
-    //       <h1 className={styles.homeTitle}>Welcome</h1>
-    //       <hr style={{width:"100"}}/>
-    //     </div>
-        
-    //     <div className='linksContainer'>
-    //       <Link href="/posts" passHref>
-    //         <Button>Fetch Posts</Button>
-    //       </Link>
-    //       <Link href="/users" passHref>
-    //         <Button> Fetch Users </Button>
-    //       </Link>
-    //     </div>
-    //   </div>      
-    // </div>
-    <div>
-      
+    <div className={styles.wrapper}>
+      <div className={styles.innerContainer}>
+        <div className={styles.titleHeader}>
+          <h1 className={styles.title}>Welcome</h1>
+          <hr className={styles.horizontalRule}/>
+        </div>
+        <div className={styles.buttonsContainer}>
+          <Link href={"/posts"} passHref>
+            <Button margin={'32px'}> Open Posts </Button>
+          </Link>
+          <Link href={"/users"} passHref>
+            <Button> View Users </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

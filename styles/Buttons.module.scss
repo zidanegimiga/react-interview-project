@@ -4,24 +4,22 @@ $accent: #7249c3;
 $secondary: #d8d4d4;
 
 .button {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 48px;
-  width: 100%;
-  margin: 32px 0 0 0;
-  background: #fcfcfc;
+  height: 51px;
+  width: 152px;
+  background: #0d0d0d;
+  border: 1px solid #4D4C4C;
   border-radius: 8px;
-  border-width: 1px;
-  padding: 0 24px;
-  border-color: #e3e3e3;
+  padding: 16px, 36px;
   cursor: pointer;
-  font-weight: 500;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
-  line-height: 120%;
+  font-weight: 400;
+  line-height: 19px;
   text-align: center;
-  color: #7249c3;
+  color: $secondary;
   transition: all 0.3s ease-in-out;
   &:hover {
-    box-shadow: 0px 8px 8px rgba(23, 2, 57, 0.1);
+    box-shadow: 0px 8px 8px rgba(35, 3, 87, 0.1);
   }
   &:active {
     transform: scale(0.98);
