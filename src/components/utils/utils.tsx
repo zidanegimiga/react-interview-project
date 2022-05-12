@@ -19,6 +19,17 @@ type Posts = [
   }
 ];
 
+type PostsAndUsers = [
+  {
+    postId: number,
+    userId: number,
+    userName: number,
+    body: string,
+    title: string,
+  }
+];
+
+
 /**
  * @param {Users[]} data
  * @return {number{}} {suiteCount, aptCount}
@@ -41,20 +52,27 @@ export function getSuiteCount(data: Users) {
 }
 
 /**
- * @param {Users[]} users
- * @param {Posts[]} posts
- * @return {UserPosts[]} usersPosts
+ * 
+ * @param users 
+ * @param posts 
+ * @returns results
  */
-export function getPostsByUsers (users: Users, posts: Posts) {
-  const usersPosts = users?.reduce((acc, curr) => {
-    const index = posts?.findIndex(item => item.userId === curr.id);
-    if(index > -1) {
-      curr.title = posts[index].title;
-      curr.body = posts[index].body;    
+export function getPostsWithUsers (users: Users, posts: Posts) {
+  let results = [];
+  users?.forEach((user) => {
+    for(let index = 0; index < posts.length; index++){
+      if(user.id === posts[index].userId){
+        results.push({
+          postId: posts[index].id,
+          userId: posts[index].userId,
+          userName: user.name,
+          title: posts[index].title,
+          body: posts[index].body
+        });
+        posts.splice(index, 1);
+        index--;
+      }
     }
-    
-    acc.push(curr);
-    return acc;
-  }, []);
-  return usersPosts;
+  });
+  return results;
 }

@@ -1,18 +1,14 @@
 /* eslint-disable */
-import useSwr from "swr";
-import { getPosts, baseUrl } from "../../lib/posts";
-import { getUsers } from "../../lib/users";
-import {getPostsByUsers} from "../components/utils/utils";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import axios from "axios";
+import { baseUrl } from "../../lib/users";
+import {getPostsWithUsers} from "../components/utils/utils";
 import Navbar from "../components/global/Navbar";
 import Post from "../components/posts/Post";
 import styles from "../../styles/Posts.module.scss"
 
-const posts = () => {
-  const { data: users, isValidating: usersLoading } = useSwr(baseUrl.concat("/users"), getUsers);
-  const { data: posts, isValidating: postsLoading } = useSwr(baseUrl.concat("/posts"), getPosts);
-
-  const postsbyUsers = getPostsByUsers(users, posts);
-    
+const posts = ({postsbyUsers}: InferGetStaticPropsType<typeof getStaticProps>) => {
+      
   return (
     <div>
       <Navbar />
@@ -22,6 +18,20 @@ const posts = () => {
       </div>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const {data: posts} = await axios.get(baseUrl.concat("/posts"));
+  const {data: users} = await axios.get(baseUrl.concat("/users"));
+
+  const postsbyUsers = getPostsWithUsers(users, posts);
+
+  return {
+    props: {
+      postsbyUsers
+    },
+    revalidate: 5
+  }
 }
 
 export default posts;
