@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { contentDescription } from "../constants/web_strings";
 
-const TitleBar = () => {
+const TitleBar = ({title}) => {
   return (
     <Head>
-      <title>Home</title>
+      <title>{title}</title>
       <meta
         key="viewport"
         name="viewport"

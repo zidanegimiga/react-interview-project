@@ -9,9 +9,8 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.homeBody}>
-      <TitleBar />
-        <Navbar />
-        <HomePageCards />
+      <TitleBar title="Home"/>
+      <HomePageCards /> 
     </div>
   )
 }
