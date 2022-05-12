@@ -6,11 +6,13 @@ import {getPostsWithUsers} from "../components/utils/utils";
 import Navbar from "../components/global/Navbar";
 import Post from "../components/posts/Post";
 import styles from "../../styles/Posts.module.scss"
+import TitleBar from "../components/global/TitleBar";
 
 const posts = ({postsbyUsers}: InferGetStaticPropsType<typeof getStaticProps>) => {
       
   return (
     <div>
+      <TitleBar title="Posts"/>
       <Navbar />
       <div className={styles.mainContainer}>
         <h1>Posts</h1>

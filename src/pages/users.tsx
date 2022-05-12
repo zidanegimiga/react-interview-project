@@ -7,12 +7,14 @@ import Navbar from "../components/global/Navbar";
 import UserCard from "../components/Users/UserCard";
 import StatsCard from "../components/Users/StatsCard";
 import styles from "../../styles/Users.module.scss";
+import TitleBar from "../components/global/TitleBar";
 
 const Users = ({users}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const response = getSuiteCount(users);
 
   return (
     <>
+      <TitleBar title="Users"/>
       <Navbar />
       <div className={styles.wrapper}>
         <h1>User</h1>

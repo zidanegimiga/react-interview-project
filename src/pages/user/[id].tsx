@@ -1,6 +1,7 @@
 /*eslint-disable */
 import axios from "axios";
 import { baseUrl } from "../../../lib/users";
+import TitleBar from "../../components/global/TitleBar";
 
 export const getStaticPaths = async () => {
   const { data } = await axios.get(baseUrl.concat("/users"));
@@ -28,6 +29,7 @@ export const getStaticProps = async (context) => {
 const User = ({ user }) => {
   return (
     <div>
+      <TitleBar title={user.name}/>
       <h1>{ user.name }</h1>
       <p>{ user.email }</p>
       <p>{ user.website }</p>

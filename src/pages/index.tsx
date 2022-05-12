@@ -6,7 +6,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <TitleBar />
+      <TitleBar title="Home"/>
       <HomePageCards /> 
     </div>
   )
