@@ -15,7 +15,6 @@ const posts = ({postsbyUsers}: InferGetStaticPropsType<typeof getStaticProps>) =
       <TitleBar title="Posts"/>
       <Navbar />
       <div className={styles.mainContainer}>
-        <h1>Posts</h1>
         <Post post={postsbyUsers}/>
       </div>
     </div>

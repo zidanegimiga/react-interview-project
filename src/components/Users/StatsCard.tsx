@@ -8,10 +8,10 @@ type Response = {
 const StatsCard = (response: Response) => {
   return (
     <div className={styles.statsCard}>
-      <h3>Stats</h3>
-      <p> Number of users living in: </p>
-      <p>Apartments: {response.aptCount}</p>
-      <p>Suites: {response.suiteCount}</p>
+      <span className={styles.statsTitle}>Stats</span>
+      <p className={styles.descriptor}> Number of users living in: </p>
+      <span>Apartments: {response.aptCount}</span>
+      <span>Suites: {response.suiteCount}</span>
     </div>
   );
 };

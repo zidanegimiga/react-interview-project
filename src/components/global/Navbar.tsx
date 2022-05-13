@@ -9,9 +9,9 @@ const Navbar = () => {
       <MobileNavbar />
       <section className={styles.mainWrapper}>
         <div className={styles.innerContainer}>
-          <div>
+          <div className={styles.logo}>
             <Link href="/" passHref>
-              <Image src="/logo.png" width={57} height={57} alt='logo'/>
+              <Image src="/logo.png" width={149} height={54} alt='logo'/>
             </Link>
           </div>
           <div className={styles.rightSection}>

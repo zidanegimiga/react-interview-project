@@ -12,10 +12,10 @@ const HomePageCards = () => {
         </div>
         <div className={styles.buttonsContainer}>
           <Link href={"/posts"} passHref>
-            <Button margin={'32px'}> Open Posts </Button>
+            <Button margin={'8px'}> Open Posts </Button>
           </Link>
           <Link href={"/users"} passHref>
-            <Button> View Users </Button>
+            <Button margin={'8px'}> View Users </Button>
           </Link>
         </div>
       </div>

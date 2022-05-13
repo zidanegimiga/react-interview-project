@@ -1,86 +1,109 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.wrapper{
+  margin: 18px 132px 18px 132px;
+  @media (max-width: 800px) {
+    margin: 16px 24px 16px 24px;        
+  }
 }
 
-.main {  
-  display: flex;
+.title{
   width: 100%;
-  @media (max-width: 435px) {
-    flex-direction: column-reverse;    
-  }
-}
-
-.rightSection {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 49px;
   display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin-right: 132px;
   align-items: center;
-  
-  @media (max-width: 435px) {
-    width: 100%;
-  }
+  text-align: center;
+  color: #FFFFFF;
 }
 
-.userCardsContainer {
+.mainContent{
+  display: flex;
+}
+
+.userCardsContainer{
+  width: 70%;
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 8px;
-  width: 50%;
-  @media (max-width: 435px) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(145px, auto);
+  grid-gap: 5px;
+  max-width:fit-content;
+  padding: 12px;
+}
+
+.rightSection{
+  width: 30%;
 }
 
 .userCard {
-  border: #707070 solid;
-  border-width: 1px;
+  border: solid 1px #4D4c4c;
   border-radius: 8px;
-  padding: 8px;
+  width: 253px;
+  height: 145px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+
   &:hover{
-    border: #7249C3 solid;
-    border-width: 2px;
-  }
-  @media (max-width: 435px) {
-    width: 100%;
+    border: none;
+    background-color: #1D1D1D;
+    filter: drop-shadow(10px 10px 20px #000000);
   }
 }
 
-.userCardsContentName {
-  font-weight: 600;
-  color:#707070;
+.nameContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.searchBox {
-  width: 300px;
-  height: 50px;
+.name{
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.companyInfoContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.companyName {
+  margin-left: 4px;
+  color: #ffffff;
+}
+
+.statsCard{
+  border: solid 1px #4D4c4c;
   border-radius: 8px;
-  border-width: 1px;
-  padding: 2px;
-  &:active {
-    border: #7249C3 solid;
-  }
-  color: #707070;
+  margin-top: 12px;
+  padding: 8px 10px;
+  height: 305px;
 }
 
-.statsCard {
-  border: #707070 solid;
-  border-width: 1px;
-  border-radius: 8px;
-  padding: 32px;
-  height: 200px;
-  width: 250px;
-  margin-top: 32px;
-  
-  @media (max-width: 435px) {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    margin-left: 16px;
-    height: 150px;
+.statsTitle {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+}
 
-  }
+.descriptor {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }

@@ -5,15 +5,21 @@ import styles from "../../../styles/Posts.module.scss";
 const Post = (props) => {
   const post = props.post;
   return (
-    post?.map((post) =>(
-        <div className={styles.PostCard} key={post.postId}>
+    <div>
+      <h1 className={styles.title}>Posts</h1>
+      {post?.map((post) =>(
+        <div className={styles.postCard} key={post.postId}>
+          <div className={styles.namesContainer}>
             <Link href={`/user/${post.userId}`} passHref>
-              <span className={styles.postName}>{post.userName}</span>
+              <span className={styles.name}>{post.userName}</span>
             </Link>
-            <span className={styles.postTitle}>{post.title}</span>
-            <span className={styles.postBody}>{post.body}</span>
+            {props.showUsername && <span className={styles.userName}>@{post.userName}</span>}
+          </div>
+          <span className={styles.postTitle}>{post.title}</span>
+          <p className={styles.postBody}>{post.body}</p>
         </div>
-    ))
+      ))}
+    </div>
   )
 }
 

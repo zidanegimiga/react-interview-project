@@ -17,9 +17,9 @@ const Users = ({users}: InferGetStaticPropsType<typeof getStaticProps>) => {
       <TitleBar title="Users"/>
       <Navbar />
       <div className={styles.wrapper}>
-        <h1>User</h1>
+        <h1 className={styles.title}>User</h1>
 
-        <div className={styles.main}>
+        <div className={styles.mainContent}>
           <div className={styles.userCardsContainer}>
             {users?.map((user) => (
               <UserCard {...user} />

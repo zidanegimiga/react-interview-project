@@ -1,0 +1,106 @@
+.pageWrapper{
+    display: flex;
+    margin: 0px 132px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      margin: 0px 64px;
+    }
+}
+
+.userInfoSide {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #4d4c4c;
+    @media (max-width: 900px) {
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid #4d4c4c;
+        width: 100%;
+    }
+}
+
+.name {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  @media (max-width: 900px) {
+    font-size: 24px;
+  }
+}
+
+.userName {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.companyAndCityContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 30px 0;
+    @media (max-width: 900px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }    
+}
+
+.company {
+    display: flex;
+    align-items: center;
+}
+
+.companyName {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-left: 14px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+}
+
+.locationName {
+    @extend .companyName
+}
+
+.editProfile {
+  background-color: transparent;
+  border: none;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #477de6;
+  padding: 2px;
+}
+
+.map {
+    @media (max-width: 900px) {
+       display: none;
+    }
+}
+
+.contactsSection {
+    @media (max-width: 900px) {
+       display: none;
+    }
+}
+
+.postsSide {
+    margin-left: 16px;
+}
