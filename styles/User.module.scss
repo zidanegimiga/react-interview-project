@@ -5,6 +5,10 @@
       flex-direction: column;
       margin: 0px 64px;
     }
+    @media (max-width: 435px) {
+      flex-direction: column;
+      margin: 0px 16px;
+    }
 }
 
 .userInfoSide {
@@ -50,7 +54,10 @@
     @media (max-width: 900px) {
       flex-direction: row;
       justify-content: space-between;
-    }    
+    } 
+    @media (max-width: 435px) {
+        flex-direction: column;
+    }   
 }
 
 .company {
