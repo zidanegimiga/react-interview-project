@@ -96,18 +96,28 @@
   padding: 2px;
 }
 
-.map {
-    @media (max-width: 900px) {
-       display: none;
-    }
-}
-
 .contactsSection {
     @media (max-width: 900px) {
-       display: none;
+      display: none; 
     }
 }
 
 .postsSide {
     margin-left: 16px;
 }
+
+.contactsCard {
+  margin-top: 4px;
+  width: 70%;
+  border: 1px solid #4d4c4c;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.input{
+  height: 22px;
+  &:active{
+    border: 1px solid #477de6;
+  }
+}
+
